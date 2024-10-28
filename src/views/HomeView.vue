@@ -1,6 +1,40 @@
 <script setup>
 
 import SplineScene from "@/components/SplineScene.vue";
+
+import lacoImage from "@/assets/projects/laco.jpg";
+import questClockImage from "@/assets/projects/quest_clock.jpg";
+import tattooImage from "@/assets/projects/tattoo.jpg";
+import campaignCancerImage from "@/assets/projects/cancer_campaign.avif";
+import threeDGraphicsImage from "@/assets/projects/3d_graphics.avif";
+
+const projects = {
+  "laco": {
+    title: "LaCo Brand",
+    image: lacoImage,
+    link: "https://www.behance.net/gallery/205614027/Cocktail-Bar"
+  },
+  "quest_clock": {
+    title: "Quest Clock",
+    image: questClockImage,
+    link: "https://www.behance.net/gallery/205266821/TATTOO-STUDIO-Instagram-Posts"
+  },
+  "tattoo": {
+    title: "Tattoo Some",
+    image: tattooImage,
+    link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
+  },
+  "cancerCampaign": {
+    title: "Social Cancer Campaign",
+    image: campaignCancerImage,
+    link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
+  },
+  "3dGraphics": {
+    title: "3D Graphics",
+    image: threeDGraphicsImage,
+    link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
+  },
+}
 </script>
 
 <template>
@@ -42,6 +76,9 @@ import SplineScene from "@/components/SplineScene.vue";
   <div class="flex justify-center items-center mx-auto">
     <img src="@/assets/experience.png" class="w-2/3">
   </div>
+  <div class="flex justify-center items-center mx-auto">
+    <img src="@/assets/experience2024.png" class="w-2/3">
+  </div>
   <!-- Technical skills -->
   <div class="flex justify-center items-center mx-auto">
     <img src="@/assets/technical_skills.png" class="w-2/3">
@@ -51,8 +88,36 @@ import SplineScene from "@/components/SplineScene.vue";
     <img src="@/assets/hobbies.png" class="w-2/3">
   </div>
   <!--  Project grid  -->
-  <div class="flex justify-evenly items-center">
-
+  <div class="w-4/5 mx-auto mb-20">
+    <p class="text-5xl text-white font-bold text-center mb-20">Take a look at my projects</p>
+    <div class="grid grid-cols-3 gap-8 px-8">
+      <div
+          v-for="(project, key) in projects"
+          :key="key"
+          class="project-card group relative aspect-square overflow-hidden rounded-lg cursor-pointer"
+      >
+        <img
+            :src="project.image"
+            :alt="project.title"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        >
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        ></div>
+        <div
+            class="absolute inset-0 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+        >
+          <h3 class="text-white text-2xl font-bold mb-4">{{ project.title }}</h3>
+          <a
+              :href="project.link"
+              target="_blank"
+              class="inline-block bg-brand-pink text-white px-6 py-2 rounded-lg transform hover:scale-105 transition-transform duration-200 text-center"
+          >
+            View on Behance
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Behance -->
   <div class="behance w-full relative">
@@ -60,7 +125,10 @@ import SplineScene from "@/components/SplineScene.vue";
     <div class="flex flex-col gap-5 justify-center items-center py-10 relative z-10">
       <p class="text-5xl text-white font-bold">VISIT MY BEHANCE</p>
       <p class="text-3xl text-white font-bold">FOR MORE!</p>
-      <button class="bg-white rounded-lg py-2 px-4">LETS SEE</button>
+      <a href="https://www.behance.net/weronikapcak" target="_blank">
+        <button class="bg-white rounded-lg py-2 px-4">LETS SEE</button>
+      </a>
+
     </div>
   </div>
 
