@@ -18,18 +18,24 @@
         frameborder="0"
     ></iframe>
 
-    <!-- Mobile Background Image -->
-    <div
+    <!-- Mobile Video Background -->
+    <video
         v-else
-        class="absolute inset-0 w-full h-full z-10 bg-cover bg-center bg-no-repeat"
-        :style="{ backgroundImage: `url(${mobileBg})` }"
-    ></div>
+        class="absolute inset-0 w-full h-full object-cover z-10"
+        autoplay
+        loop
+        muted
+        playsinline
+    >
+      <source :src="mobileBg" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </template>
 
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
-import mobileBg from '@/assets/mobile_bg.png'
+import mobileBg from '@/assets/cover_mobile.mp4'
 
 // State
 const isMobile = ref(false)
@@ -67,5 +73,16 @@ onUnmounted(() => {
   .mt-10 {
     margin-top: 1.5rem;
   }
+}
+
+/* Optional: Add a dark overlay to make text more readable */
+video::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
 }
 </style>
