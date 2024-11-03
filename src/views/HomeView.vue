@@ -71,11 +71,11 @@ const projects = {
       </div>
     </div>
   </nav>
-  <div class="bg-gray-200">
+  <section class="bg-gray-200">
     <!-- Spline animation -->
     <SplineScene/>
-  </div>
-  <div class="flex flex-col md:flex-row justify-between items-center w-full md:w-3/4 p-6 md:p-20 mx-auto md:gap-20">
+  </section>
+  <section class="flex flex-col md:flex-row justify-between items-center w-full md:w-3/4 p-6 md:p-20 mx-auto md:gap-20">
     <div class="w-full md:w-1/2 px-4 md:px-12 text-center md:text-left mb-8 md:mb-0">
       <o class="text-gray-600 text-[36px] md:text-[50px] leading-7">
         HELLO! <br>
@@ -97,28 +97,30 @@ const projects = {
     <div class="w-full md:w-1/2">
       <img src="@/assets/me.png" class="rounded-2xl w-full">
     </div>
-  </div>
+  </section>
   <!-- Education -->
-  <div class="flex justify-center items-center mx-auto px-4 md:px-0">
+  <section id="education" aria-label="Education" class="flex justify-center items-center mx-auto px-4 md:px-0">
     <img src="@/assets/education.png" class="w-full md:w-2/3">
-  </div>
+  </section>
   <!-- Experience -->
-  <div class="flex justify-center items-center mx-auto px-4 md:px-0">
+  <section id="experience" aria-label="Experience" class="flex justify-center items-center mx-auto px-4 md:px-0">
     <img src="@/assets/experience.png" class="w-full md:w-2/3">
-  </div>
-  <div class="flex justify-center items-center mx-auto px-4 md:px-0">
+  </section>
+  <section id="fresh-experience" aria-label="2024 Experience"
+           class="flex justify-center items-center mx-auto px-4 md:px-0">
     <img src="@/assets/experience2024.png" class="w-full md:w-2/3">
-  </div>
+  </section>
   <!-- Technical skills -->
-  <div class="flex justify-center items-center mx-auto px-4 md:px-0">
+  <section id="technical skills" aria-label="Technical Skills"
+           class="flex justify-center items-center mx-auto px-4 md:px-0">
     <img src="@/assets/technical_skills.png" class="w-full md:w-2/3">
-  </div>
+  </section>
   <!-- Hobbies -->
-  <div class="flex justify-center items-center mx-auto px-4 md:px-0">
+  <section id="hobbyy" aria-label="Hobby" class="flex justify-center items-center mx-auto px-4 md:px-0">
     <img src="@/assets/hobbies.png" class="w-full md:w-2/3">
-  </div>
+  </section>
   <!--  Project grid  -->
-  <div class="w-full md:w-4/5 mx-auto mb-20 px-4 md:px-0">
+  <section id="realized-projects" aria-label="Realized Projects" class="w-full md:w-4/5 mx-auto mb-20 px-4 md:px-0">
     <p class="text-4xl md:text-5xl text-white font-bold text-center mb-10 md:mb-20">Take a look at my projects</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
       <div
@@ -148,9 +150,9 @@ const projects = {
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- Behance -->
-  <div class="behance w-full relative">
+  <section id="behance" aria-label="Behance" class="behance w-full relative">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="flex flex-col gap-4 md:gap-5 justify-center items-center py-8 md:py-20 relative z-10 px-4 md:px-0">
       <p class="text-3xl md:text-5xl text-white font-bold text-center">VISIT MY BEHANCE</p>
@@ -159,13 +161,14 @@ const projects = {
         <button class="bg-white rounded-lg py-2 px-4">LET'S SEE</button>
       </a>
     </div>
-  </div>
+  </section>
 
   <!-- Contact -->
-  <div class="flex flex-col justify-center items-center py-12 md:py-20 px-4 md:px-0">
+  <section id="contact" aria-label="Contact"
+           class="flex flex-col justify-center items-center py-12 md:py-20 px-4 md:px-0">
     <p class="text-4xl md:text-5xl text-white font-bold text-center mb-4">Contact me</p>
     <a class="text-white text-lg md:text-xl" href="mailto:mswer.art@gmail.com">mswer.art@gmail.com</a>
-  </div>
+  </section>
 </template>
 
 <style>
