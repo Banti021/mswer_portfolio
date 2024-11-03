@@ -4,8 +4,9 @@ import SplineScene from "@/components/SplineScene.vue";
 import lacoImage from "@/assets/projects/laco.jpg";
 import questClockImage from "@/assets/projects/quest_clock.jpg";
 import tattooImage from "@/assets/projects/tattoo.jpg";
-import campaignCancerImage from "@/assets/projects/cancer_campaign.avif";
-import threeDGraphicsImage from "@/assets/projects/3d_graphics.avif";
+import campaignCancerImage from "@/assets/projects/cancer_campaign.png";
+import pigeonatorImage from "@/assets/projects/pigeonator.png";
+import weartherImage from "@/assets/projects/wearther.png";
 
 const projects = {
   "laco": {
@@ -23,21 +24,26 @@ const projects = {
     image: tattooImage,
     link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
   },
-  "cancerCampaign": {
+  "cancer_campaign": {
     title: "Social Cancer Campaign",
     image: campaignCancerImage,
     link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
   },
-  "3dGraphics": {
-    title: "3D Graphics",
-    image: threeDGraphicsImage,
-    link: "https://www.behance.net/gallery/189401471/QuestClock-Pomodoro-App-UIUX-Design"
+  "pigeonator": {
+    title: "Pigeonator",
+    image: pigeonatorImage,
+    link: "https://www.behance.net/gallery/179920835/The-Pigeonator-Pixel-Art-Game"
+  },
+  "wearther": {
+    title: "WEARther",
+    image: weartherImage,
+    link: "https://www.behance.net/gallery/179921743/WEARther-Your-Personal-Advisor"
   },
 }
 </script>
 
 <template>
-  <nav class="sticky top-0 flex py-4 px-4 md:px-10 bg-black">
+  <nav class="sticky z-[9999] top-0 flex py-4 px-4 md:px-10 bg-black">
     <div class="w-full flex justify-between items-center gap-4">
       <img src="@/assets/logo.svg" class="min-h-[40px] max-h-[40px] md:max-h-[50px]" alt="Logo Ms.Wer">
       <div class="flex justify-evenly items-center gap-5">
@@ -146,11 +152,11 @@ const projects = {
   <!-- Behance -->
   <div class="behance w-full relative">
     <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="flex flex-col gap-4 md:gap-5 justify-center items-center py-8 md:py-10 relative z-10 px-4 md:px-0">
+    <div class="flex flex-col gap-4 md:gap-5 justify-center items-center py-8 md:py-20 relative z-10 px-4 md:px-0">
       <p class="text-3xl md:text-5xl text-white font-bold text-center">VISIT MY BEHANCE</p>
       <p class="text-2xl md:text-3xl text-white font-bold">FOR MORE!</p>
       <a href="https://www.behance.net/weronikapcak" target="_blank">
-        <button class="bg-white rounded-lg py-2 px-4">LETS SEE</button>
+        <button class="bg-white rounded-lg py-2 px-4">LET'S SEE</button>
       </a>
     </div>
   </div>

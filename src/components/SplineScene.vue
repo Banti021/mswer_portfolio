@@ -3,7 +3,7 @@
     <!-- Text Overlay -->
     <div class="absolute inset-0 flex flex-col items-center justify-center z-20">
       <p class="text-[100px] relative top-[+40px] md:top-0 md:text-6xl lg:text-[100px] text-white drop-shadow-lg">BE</p>
-      <p class="text-[60px] md:text-6xl lg:text-[100px] leading-3 text-brand-pink font-bold drop-shadow-lg">
+      <p class="text-[50px] md:text-6xl lg:text-[100px] leading-3 text-brand-pink font-bold drop-shadow-lg">
         OUTSTANDING</p>
       <p class="mt-10 relative top-[-50px] text-[80px] md:text-6xl lg:text-[100px] text-white leading-6 font-inspiration drop-shadow-lg">
         with me
